@@ -16,9 +16,11 @@
 :root.light {
   --white: white;
   --black: black;
-  --navyblue: rgb(29, 55, 104);
+  --navyblue: rgb(5,21,63);
+  --blue: rgb(0,149,254);
   --primary-color: white;
   --sup-primary-color: rgb(240, 240, 240);
+  --secondary: rgb(250, 249, 249);
   --text: rgb(24, 24, 24);
   --sub-text: rgb(36, 36, 36);
   --spec-blue: rgb(29, 127, 240);
@@ -28,17 +30,20 @@
   --footer: rgba(255, 255, 255, 0.952);
   --c-shadow: rgba(95, 95, 95, 0.082);
   --selection: rgb(243, 78, 235);
+  --new-spec: rgba(233, 233, 233, 0.473);
 }
 
 :root.dark {
   --primary-color: rgb(20, 20, 20);
   --sup-primary-color: rgb(46, 45, 45);
+  --secondary: rgb(24,25,26);
   --text: rgb(243, 243, 243);
   --sub-text: rgb(218, 218, 218);
   --footer: rgba(20, 20, 20, 0.952);
   --c-shadow: rgba(151, 151, 151, 0.082);
   --spec-green: rgb(0, 255, 0);
   --spec-green-sub: rgba(0, 255, 0, 0.24);
+  --new-spec: rgba(70, 70, 70, 0.473);
 }
 
 #root {
@@ -113,7 +118,7 @@ header .searchBar form {
   height: 40px;
   padding-inline:  20px;
   align-items: center;
-  border-radius: 25px;
+  border-radius: 8px;
   background-color: var(--sup-primary-color);
 }
 
@@ -121,7 +126,7 @@ header .searchBar button {
   display: flex;
   height: 40px;
   width: 70px;
-  border-radius: 25px;
+  border-radius: 8px;
   align-items: center;
   justify-content: center;
   outline: none;
@@ -180,10 +185,9 @@ header .searchBar form input::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
   z-index: 9;
-  background-color: var(--navyblue)
-  ;
+  background-color: var(--navyblue);
 }
 
 .Nav h1,
@@ -195,7 +199,7 @@ header .searchBar form input::placeholder {
 .Nav h1,
 header h1 {
   font-weight: 600;
-  font-size: 2rem
+  font-size: 2.2rem
 }
 
 .Nav p {
@@ -231,12 +235,12 @@ header h1 {
 
 .activeSideLink::before{
   content: "";
-  background-color: var(--white);
-  width: 3px;
+  background-color: var(--selection);
+  width: 5px;
   height: 24px;
   position: absolute;
   border-radius: 3px;
-  left: -2px;
+  left: -3px;
   opacity: 0.6;
 }
 
@@ -261,16 +265,20 @@ main {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  background-color: var(--secondary);
   gap: 20px;
   padding: 0;
   position: relative;
+  padding: 20px 0;
+  border-radius: 8px;
 }
 
 .section .title {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 20px
+  gap: 20px;
+  padding: 0 10px;
 }
 
 .section .title img {
@@ -295,12 +303,12 @@ main {
   font-size: 16px;
   font-weight: 500;
   opacity: 0.9;
+  padding: 0 5px;
 }
 
 .section figure img {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
 }
 
 .section .date {
@@ -468,6 +476,108 @@ main {
   margin-bottom: 10px;
 }
 
+.postPage {
+  padding: 90px 0 0 0;
+}
+
+.postPage .top {
+  height: 250px;
+  position: relative;
+  border-radius: 0 0 16px 16px;
+}
+
+.postPage .headerImg {
+  background-color: var(--secondary);
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+}
+
+.postPage .headerImg img {
+  object-fit: cover;
+}
+
+.postPage .back {
+  width: fit-content;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 10px;
+  padding-inline: 0 10px;
+  align-items: center;
+  background-color: var(--new-spec);
+  backdrop-filter: blur(10px);
+  border-radius: 0 5px 5px 0;
+}
+
+.postPage .back p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.postPage .center {
+  margin-top: 40px;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+}
+
+.postPage .postContent p {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.postPage figure {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.postPage figure img {
+  width: 100%;
+}
+
+.postPage .profileInfo {
+  width: fit-content;
+  background-color: var(--new-spec);
+  backdrop-filter: blur(10px);
+  height: 70px;
+  position: absolute;
+  bottom: -35px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+.postPage .profileImg{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.postPage .profileTitle {
+  width: fit-content;
+  height: fit-content;
+}
+
+.postPage .profileTitle h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.postPage .profileTitle p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
 footer {
   display: none;
   background-color: var(--footer);
@@ -573,6 +683,16 @@ footer {
 
   .ContestPage {
     padding: 10px 20px 70px 20px;
+  }
+
+  .postPage {
+    padding: 0;
+  }
+
+  .postPage .top {
+    border: 1px solid black;
+    height: 150px;
+    position: relative;
   }
 
   footer {

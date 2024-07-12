@@ -14,6 +14,7 @@ import SearchPage from './components/searchPage'
 
 function App() {
 
+  
   return (
     <div className="App">
       <DataProvider>

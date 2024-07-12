@@ -1,0 +1,37 @@
+{  
+  
+  "posts": [{
+      "id": 1,
+      "Img": "/img/profile.jpg",
+      "title": "NSMQ",
+      "subTitle": "NSMQ Platform",
+      "postContent": "SCHOOL CHAMPIONSHIP\n School 1: 58pts\n School 2: 42pts\n School 3: 78pts",
+      "postImg": "/img/imgp1.jpg"
+    }, 
+    {
+      "id": 2,
+      "Img": "/img/profile.jpg",
+      "title": "NSMQ",
+      "subTitle": "NSMQ Platform",
+      "postContent": "SCHOOL CHAMPIONSHIP\n School 1: 58pts\n School 2: 42pts\n School 3: 78pts",
+      "postImg": "/img/He1.jpg"
+    },
+    {
+      "id": 3,
+      "Img": "/img/profile.jpg",
+      "title": "NSMQ",
+      "subTitle": "NSMQ Platform",
+      "postContent": "SCHOOL CHAMPIONSHIP\n School 1: 58pts\n School 2: 42pts\n School 3: 78pts",
+      "postImg": "/img/He1.jpg"
+    },
+    {
+      "id": 4,
+      "Img": "/img/profile.jpg",
+      "title": "NSMQ",
+      "subTitle": "NSMQ Platform",
+      "postContent": "SCHOOL CHAMPIONSHIP\n School 1: 58pts\n School 2: 42pts\n School 3: 78pts",
+      "postImg": "/img/He1.jpg"
+    }
+  ]
+ 
+}

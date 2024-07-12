@@ -32,16 +32,8 @@ const ContestPage = () => {
     }));
   };
 
-  if(loading) {
-    return (<main>
-      <p>Loading...</p>
-      <NavLink to="/contest">
-        Go back
-      </NavLink>
-    </main>)
-  }
 
-  if (!contest) {
+  if (!contest || loading) {
     return (
       <main className="ContestPage">
         <div className="header">

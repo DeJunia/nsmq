@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+}
+
+:root,
+:root.light {
+  --white: white;
+  --black: black;
+  --navyblue: rgb(5,21,63);
+  --blue: rgb(0,149,254);
+  --primary-color: white;
+  --sup-primary-color: rgb(240, 240, 240);
+  --secondary: rgb(250, 249, 249);
+  --text: rgb(24, 24, 24);
+  --sub-text: rgb(36, 36, 36);
+  --spec-blue: rgb(29, 127, 240);
+  --sub-spec-blue: rgba(29, 127, 240, 0.247);
+  --spec-green: rgb(218, 6, 6);
+  --spec-green-sub: rgba(8, 194, 8, 0.137);
+  --footer: rgba(255, 255, 255, 0.952);
+  --c-shadow: rgba(95, 95, 95, 0.082);
+  --selection: rgb(243, 78, 235);
+}
+
+:root.dark {
+  --primary-color: rgb(20, 20, 20);
+  --sup-primary-color: rgb(46, 45, 45);
+  --secondary: rgb(24,25,26);
+  --text: rgb(243, 243, 243);
+  --sub-text: rgb(218, 218, 218);
+  --footer: rgba(20, 20, 20, 0.952);
+  --c-shadow: rgba(151, 151, 151, 0.082);
+  --spec-green: rgb(0, 255, 0);
+  --spec-green-sub: rgba(0, 255, 0, 0.24);
+}
+
+.auto-scroll-container {
+  width: 100%;
+  height: 300px;
+}
+
+.scroll-container {
+  width: 100%; 
+  overflow: hidden;
+  overflow-x: scroll; 
+  white-space: nowrap; 
+  scroll-snap-type: x mandatory; 
+  margin-bottom: 20px;
+  height: 250px;
+}
+
+.box {
+  width: 100%;
+  height: 250px;
+  display: inline-block; 
+  scroll-snap-align: start;
+  position: relative;
+  margin-left: 20px;
+  border-radius: 16px;
+}
+
+.box-content {
+  height: 250px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--secondary);
+}
+
+.box-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--sup-primary-color);
+  margin: 0 5px;
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+.dot.active {
+  border: 2px solid var(--primary-color);
+}
+
+
+@media screen and (max-width: 450px) {
+  .scroll-container {
+    height: 150px;
+  }
+
+  .auto-scroll-container {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .box {
+    height: 150px;
+  }
+  
+  .box-content {
+    height: 150px;
+  }
+}

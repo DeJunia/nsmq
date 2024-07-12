@@ -7,9 +7,27 @@ const Contest = () => {
 
   const { contests } = useContext(DataContext);
 
+  if(!contests) {
+    return [
+      <main>
+        <p style={{
+          color: 'red',
+          width: '100%',
+          textAlign: 'center'
+        }}>No Contests found</p>
+        <p
+        style={{
+          color: 'red',
+          width: '100%',
+          textAlign: 'center'
+        }}>Reload Page</p>
+      </main>
+    ];
+  }
+
   return (
     <main className="Contest">
-      {
+      {contests &&
         contests.map(contest => (
         <div className="c-Section" key={contest.id}>
           <NavLink to={`/contest/${contest.id}`} className="title">
