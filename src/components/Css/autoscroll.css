@@ -57,6 +57,7 @@
   scroll-snap-type: x mandatory; 
   margin-bottom: 20px;
   height: 250px;
+  border-radius: 16px;
 }
 
 .box {
