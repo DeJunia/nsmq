@@ -7,6 +7,7 @@ import PostPage from './components/postPage'
 import Contest from './components/contest'
 import ContestPage from './components/contestPage'
 import About from './components/about'
+import VideoPage from './components/videoPage'
 import Missing from './components/missing'
 import LowerSection from './components/lowerSection'
 import { DataProvider } from './context/dataContext'
@@ -28,6 +29,7 @@ function App() {
           <Route path='/AboutPg' element={<About />}/>
           <Route path='/*' element={<Missing />}/>
           <Route eaxact path='/search' element={<SearchPage/>}/>
+          <Route exact path='/video' element={<VideoPage/>}/>
         </Routes>
         <LowerSection />
       </DataProvider>
