@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/header'
 import Nav from './components/nav'
@@ -27,7 +27,7 @@ function App() {
           <Route path='/contest' element={<Contest />}/>
           <Route path='/contest/:id' element={<ContestPage />}/>
           <Route path='/AboutPg' element={<About />}/>
-          <Route path='/*' element={<Missing />}/>
+          <Route path='*' element={<Missing />}/>
           <Route eaxact path='/search' element={<SearchPage/>}/>
           <Route exact path='/video' element={<VideoPage/>}/>
         </Routes>
