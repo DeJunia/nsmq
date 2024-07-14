@@ -9,6 +9,8 @@ import settingIcon from '../assets/icons/setting.svg'
 import settingIconDark from '../assets/icons/settingdk.svg'
 import closeIcon from '../assets/icons/close.svg'
 import closeIconDark from '../assets/icons/closedk.svg'
+import videoIcon from '../assets/icons/video.svg'
+import videoIcondk from '../assets/icons/videodk.svg'
 import DataContext from '../context/dataContext'
 
 const Nav = () => {
@@ -36,6 +38,14 @@ const Nav = () => {
         width={24} 
         height={24} alt="" /> 
           <p>Contest</p>
+        </NavLink>
+
+        <NavLink to='/video' 
+        className={({isActive}) => (isActive ? 'activeSideLink' : 'sideLink')}><img 
+        src={videoIcondk} 
+        width={24} 
+        height={24} alt="" /> 
+          <p>Videos</p>
         </NavLink>
 
         <NavLink to='/aboutPg' 
