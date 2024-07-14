@@ -15,11 +15,13 @@ export const DataProvider = ({ children }) => {
   const navigate = useNavigate();
   const { postsData, contestsData, imagesData, fetchError, loading } = useAxiosFetch('data/posts.json', 'data/contests.json', 'data/images.json');
 
+
   useEffect(() => {
     setPosts(postsData.posts);
     setContests(contestsData.contests);
     setImages(imagesData.images);
   }, [postsData, contestsData, imagesData]);
+ 
 
   useEffect(() => {
     const saveTheme = localStorage.getItem('theme') || 'light';

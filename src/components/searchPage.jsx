@@ -29,8 +29,21 @@ const SearchPage = () => {
               <div key={contest.id} className='searchResults'>
                 <NavLink to={`/contest/${contest.id}`}>{contest.title}</NavLink>
               </div>
-        )) 
-      ) : <p>No posts or contests found</p> }
+        )).reverse() 
+        
+      ) : <p>No contests found</p> }
+      {
+        filteredPosts.length > 0 ? (
+          filteredPosts.map(post => (
+            <div key={post.id} className='searchResults red'>
+              <NavLink to={`/post/${post.id}`}>{post.title}
+              </NavLink>
+            </div>
+      )).reverse() 
+      
+    ) : <p>No posts found</p>
+      }
+      
           </div>
         ) : (
           <p>Please Enter a search term</p>

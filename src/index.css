@@ -481,6 +481,10 @@ main {
   margin-bottom: 10px;
 }
 
+.searchResults.red {
+  border-left: 3px solid var(--spec-blue)
+}
+
 .postPage {
   padding: 90px 0 0 0;
 }
@@ -582,6 +586,77 @@ main {
 .postPage .profileTitle p {
   font-weight: 500;
   font-size: 14px;
+}
+
+.aboutPage {
+  width: 100%;
+  padding-bottom: 70px;
+}
+
+.aboutPage .head {
+  width: 100%;
+  background-color: var(--navyblue);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 350px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 24px;
+  border-radius: 24px;
+  margin-bottom: 24px;
+}
+
+.aboutPage .head a  {
+  width: 100%;
+  text-align: center;
+  color: var(--text);
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.aboutPage .title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--spec-blue);
+  padding:  10px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.aboutPage .title p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.aboutPage .p {
+  padding: 10px 20px;
+  margin: 0 20px 10px 20px;
+  border-radius: 8px;
+  background-color: var(--sup-primary-color);
+}
+
+.aboutPage .head p {
+  color: var(--white);
+  text-align: justify;
+  width: 80%;
+}
+
+.follow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.follow a {
+  font-size: 13px;
+}
+
+.follow span {
+  display: flex;
+  gap: 10px;
 }
 
 footer {

@@ -35,13 +35,15 @@ const Contest = () => {
             <p>{contest.subTitle}</p>
           </NavLink>
           <div className="l-Side">
-            <p>{(contest.schoolsNo < 2) ? 'Sch: ' : 'Schs: '} <span>{contest.schoolsNo}</span></p>
+            <p>
+            <span>{contest.schoolsNo} </span>
+              {(contest.schoolsNo < 2) ? 'Sch' : 'Schs'} </p>
             <div className="download">
               <img src={downloadIcon} width={16} height={16} alt="" />
             </div>
           </div>
       </div>
-        ))
+        )).reverse()
       }
 
     </main>

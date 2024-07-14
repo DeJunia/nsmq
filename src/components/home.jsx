@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 const Home = ( ) => {
   const { posts } = useContext(DataContext);
 
+
   if(!posts) {
     return[
       <main>
@@ -37,7 +38,7 @@ const Home = ( ) => {
           <img src={post.postImg} alt="" />
         </figure>
         </div>
-      ))}
+      )).reverse()}
 
     </main>
   )

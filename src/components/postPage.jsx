@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { useParams, NavLink } from 'react-router-dom'
 import DataContext from '../context/dataContext';
 import backIconD from '../assets/icons/left.svg';
@@ -8,9 +8,6 @@ import backIcon from '../assets/icons/leftdk.svg';
 const PostPage = () => {
   const { posts, theme} = useContext(DataContext);
   const { id } = useParams();
-
-
-
 
 const post = posts.find(post => (post.id).toString() === (id));  
 
